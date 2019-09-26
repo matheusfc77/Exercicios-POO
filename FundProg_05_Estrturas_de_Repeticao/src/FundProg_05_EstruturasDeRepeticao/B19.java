@@ -33,6 +33,7 @@ public class B19 {
                 primos.add(i);
                 numDiv.add(divisoes);
             } else {
+                // encontrado nº primos
                 quociente = n;
                 divisor = 1;
                 while (quociente >= divisor) {
@@ -40,13 +41,13 @@ public class B19 {
                     quociente = i / divisor;
                     resto = i % divisor;
 
-                    if (quociente < divisor && resto != 0 && !primos.contains(i)) {
+                    if (quociente < divisor && resto != 0 && !primos.contains(i)) { // lógica matemática que caracteriza todo primo
                         primos.add(i);
                         numDiv.add(divisoes);
                         break;
                     } else if (resto == 0)
                         break;
-
+                    // primo já encotrado
                     divisoes++;
                 }
             }
